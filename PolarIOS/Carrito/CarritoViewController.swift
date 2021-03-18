@@ -66,13 +66,17 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
      navigationController?.setNavigationBarHidden(true, animated: false)
 
             let cantidad = UserDefaults.standard.integer(forKey: "cantidadMisPedidos")
-           if(cantidad == 0){
-               self.codigodescuento = "PRIMERO"
+           //if(cantidad == 0){
+        let sihay = UserDefaults.standard.string(forKey:  "descuentoseleccionado")!
+
+            if(sihay != ""){
+               self.codigodescuento = sihay
                        
                        descuento()
                }
            
        }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -122,7 +126,9 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
         latlog()
    
     cantidad = UserDefaults.standard.integer(forKey: "cantidadMisPedidos")
-    if(cantidad == 0){
+//    if(cantidad == 0){
+        if(false){
+
         self.codigodescuento = "PRIMERO"
                 
                 descuento()
@@ -159,6 +165,8 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.defaults.set("false", forKey: "nuevatarjeta")
         self.defaults.set("carrito", forKey: "dondepago")
         performSegue(withIdentifier: "metodo", sender:sender)
+        self.defaults.set(codigodescuento, forKey: "descuentoseleccionado")
+
     }
     
     func pantalla(){
@@ -300,6 +308,13 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.imgenproducto.remove(at: id)
             self.cantidadcarrito = self.cantidadcarrito - (1 * cant)
             self.btncarrito.setTitle("\(self.cantidadcarrito)",for: .normal)
+          
+            self.defaults.set(self.pkproductoagregado, forKey: "pkproductoagregado")
+            self.defaults.set(self.cantidadproductoagregado, forKey: "cantidadproductoagregado")
+            self.defaults.set(self.imgenproducto, forKey: "imgenproducto")
+            self.defaults.set(self.cantidadcarrito, forKey: "cantidadcarrito")
+
+            
             
             if self.cantidadcarrito == 0{
                 self.defaults.removeObject(forKey: "cantidadcarrito")
@@ -460,8 +475,9 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
                     
                 }
             }
-            
-            if(self.cantidad == 0){
+            // if(self.cantidad == 0)
+            if(false)
+            {
                                 self.codigodescuento = "PRIMERO"
                                         
                                 self.descuento()
@@ -538,7 +554,10 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
                         
                         
                     }
-                    if(self.cantidad == 0){
+                   // if(self.cantidad == 0){
+                        if(false){
+
+                        
                         self.codigodescuento = "PRIMERO"
                                 
                         self.descuento()
@@ -592,9 +611,11 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
         let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let guiaOk = UIAlertAction(title: "Aceptar", style: .default) {
             (action) in
+            self.defaults.set("", forKey: "descuentoseleccionado")
+
             self.performSegue(withIdentifier: "gomap", sender: self)
             
-            
+
             
         }
         alertaGuia.addAction(guiaOk)
@@ -604,7 +625,8 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
-            
+            self.defaults.set("", forKey: "descuentoseleccionado")
+
             self.performSegue(withIdentifier: "gomap", sender: self)
             
         case .denied:
@@ -620,6 +642,8 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
             print ("error")
             break
         case .authorizedAlways:
+            self.defaults.set("", forKey: "descuentoseleccionado")
+
             self.performSegue(withIdentifier: "gomap", sender: self)
             break
             
@@ -644,11 +668,12 @@ class carritoViewController: UIViewController, UITableViewDelegate, UITableViewD
                         let men = (mensaje) as! Int
                         if men == 0 {
                             self.cargador.isHidden = true
-                            
+                            self.defaults.set("", forKey: "descuentoseleccionado")
+
                             if let mensaj = dictionary["mensaje"] {
                                 self.mostrarAlerta(title: mensaj as! String, message: "")
                             }
-                            
+
                             return
                         }
                     }

@@ -268,10 +268,10 @@
 		14F3357B2432E39D0036FD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14F3357E2432E39D0036FD36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14F335802432E39D0036FD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14F335852432E39D0036FD36 /* PolarIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F335852432E39D0036FD36 /* AcmarketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcmarketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F335892432E39D0036FD36 /* PolarIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarIOSTests.swift; sourceTree = "<group>"; };
 		14F3358B2432E39D0036FD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14F335902432E39D0036FD36 /* PolarIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolarIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F335902432E39D0036FD36 /* AcmarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcmarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F335942432E39D0036FD36 /* PolarIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolarIOSUITests.swift; sourceTree = "<group>"; };
 		14F335962432E39D0036FD36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14F48C402450F874007DA549 /* ListadestinosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListadestinosCollectionViewController.swift; sourceTree = "<group>"; };
@@ -502,8 +502,8 @@
 			isa = PBXGroup;
 			children = (
 				14F335712432E39B0036FD36 /* ACMarket.app */,
-				14F335852432E39D0036FD36 /* PolarIOSTests.xctest */,
-				14F335902432E39D0036FD36 /* PolarIOSUITests.xctest */,
+				14F335852432E39D0036FD36 /* AcmarketTests.xctest */,
+				14F335902432E39D0036FD36 /* AcmarketUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -511,46 +511,46 @@
 		14F335732432E39B0036FD36 /* PolarIOS */ = {
 			isa = PBXGroup;
 			children = (
-				14E57C2D243C26CA00C050BE /* PolarIOS.entitlements */,
-				14E57C22243C01F700C050BE /* CONTENIDO */,
-				14C411042435928100EAB8E0 /* New Group */,
-				14550E1424331F3E005DDEF3 /* Pedidos */,
-				14550E0724331DDA005DDEF3 /* Carrito */,
-				14550DF624331C2D005DDEF3 /* Inicio */,
-				14550DEF24331BC9005DDEF3 /* Restablecer */,
-				14550DEE24331BB6005DDEF3 /* Registrate */,
-				1401FE9B2432EA7700A60B29 /* utilidades */,
-				1401FE952432E69D00A60B29 /* Font */,
-				1401FE922432E5C600A60B29 /* img */,
 				14F335742432E39B0036FD36 /* AppDelegate.swift */,
-				14F335762432E39B0036FD36 /* ViewController.swift */,
-				14F335782432E39C0036FD36 /* Main.storyboard */,
 				14F3357B2432E39D0036FD36 /* Assets.xcassets */,
-				1438BDC524635035001D0029 /* GoogleService-Info.plist */,
-				14F3357D2432E39D0036FD36 /* LaunchScreen.storyboard */,
-				14E57C25243C03DC00C050BE /* JsonClass.swift */,
-				14E57C26243C03DC00C050BE /* JsonClass2.swift */,
-				14F335802432E39D0036FD36 /* Info.plist */,
+				14B1064F249361CD00B0C579 /* BuscarArticuloCollectionViewController.swift */,
+				14550E0724331DDA005DDEF3 /* Carrito */,
+				14E57C22243C01F700C050BE /* CONTENIDO */,
 				1418775B2436A0640034B86C /* CoordenadasViewController.swift */,
-				14B6722624378CAF00F19C21 /* ViewController.h */,
-				1418775D2436CAAE0034B86C /* PreparandoViewController.swift */,
-				14B6722424378BF200F19C21 /* tarjeta.m */,
-				14B6722324378BF200F19C21 /* PolarIOS-Bridging-Header.h */,
-				14B672272437A06C00F19C21 /* MetodosdepagoViewController.swift */,
-				14B672292437A8C000F19C21 /* PerfilViewController.swift */,
-				14B6722B2437AC8200F19C21 /* MetodosCell.swift */,
-				14B5F94F2438368800614477 /* TabViewController.swift */,
 				145531962438E8E7003C7AD0 /* Devicecontroller.m */,
 				145531982438E978003C7AD0 /* DeviceHeader.h */,
-				14E57C23243C022B00C050BE /* SoporteViewController.swift */,
-				141A24C424464E5A00493538 /* PoliticasyavisodeprivacidadViewController.swift */,
-				14A0DFEC244E7B2C00EB6234 /* GifExtens.swift */,
-				14F48C402450F874007DA549 /* ListadestinosCollectionViewController.swift */,
-				1456AD5A245FA88D00629A74 /* Prueba1CollectionViewController.swift */,
-				1456AD5C245FA8BB00629A74 /* TableCell.swift */,
-				14F9113024918FF700C24A73 /* TutorialCollectionViewController.swift */,
-				14B1064F249361CD00B0C579 /* BuscarArticuloCollectionViewController.swift */,
 				14A0FF3B24D92D44009E5EC5 /* EncuestaCollectionViewController.swift */,
+				1401FE952432E69D00A60B29 /* Font */,
+				14A0DFEC244E7B2C00EB6234 /* GifExtens.swift */,
+				1438BDC524635035001D0029 /* GoogleService-Info.plist */,
+				1401FE922432E5C600A60B29 /* img */,
+				14F335802432E39D0036FD36 /* Info.plist */,
+				14550DF624331C2D005DDEF3 /* Inicio */,
+				14E57C25243C03DC00C050BE /* JsonClass.swift */,
+				14E57C26243C03DC00C050BE /* JsonClass2.swift */,
+				14F3357D2432E39D0036FD36 /* LaunchScreen.storyboard */,
+				14F48C402450F874007DA549 /* ListadestinosCollectionViewController.swift */,
+				14F335782432E39C0036FD36 /* Main.storyboard */,
+				14B6722B2437AC8200F19C21 /* MetodosCell.swift */,
+				14B672272437A06C00F19C21 /* MetodosdepagoViewController.swift */,
+				14C411042435928100EAB8E0 /* New Group */,
+				14550E1424331F3E005DDEF3 /* Pedidos */,
+				14B672292437A8C000F19C21 /* PerfilViewController.swift */,
+				14B6722324378BF200F19C21 /* PolarIOS-Bridging-Header.h */,
+				14E57C2D243C26CA00C050BE /* PolarIOS.entitlements */,
+				141A24C424464E5A00493538 /* PoliticasyavisodeprivacidadViewController.swift */,
+				1418775D2436CAAE0034B86C /* PreparandoViewController.swift */,
+				1456AD5A245FA88D00629A74 /* Prueba1CollectionViewController.swift */,
+				14550DEE24331BB6005DDEF3 /* Registrate */,
+				14550DEF24331BC9005DDEF3 /* Restablecer */,
+				14E57C23243C022B00C050BE /* SoporteViewController.swift */,
+				1456AD5C245FA8BB00629A74 /* TableCell.swift */,
+				14B5F94F2438368800614477 /* TabViewController.swift */,
+				14B6722424378BF200F19C21 /* tarjeta.m */,
+				14F9113024918FF700C24A73 /* TutorialCollectionViewController.swift */,
+				1401FE9B2432EA7700A60B29 /* utilidades */,
+				14B6722624378CAF00F19C21 /* ViewController.h */,
+				14F335762432E39B0036FD36 /* ViewController.swift */,
 			);
 			path = PolarIOS;
 			sourceTree = "<group>";
@@ -589,9 +589,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14F335702432E39B0036FD36 /* PolarIOS */ = {
+		14F335702432E39B0036FD36 /* Acmarket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14F335992432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOS" */;
+			buildConfigurationList = 14F335992432E39D0036FD36 /* Build configuration list for PBXNativeTarget "Acmarket" */;
 			buildPhases = (
 				4174D5892E80F588564951CB /* [CP] Check Pods Manifest.lock */,
 				14F3356D2432E39B0036FD36 /* Sources */,
@@ -603,7 +603,7 @@
 			);
 			dependencies = (
 			);
-			name = PolarIOS;
+			name = Acmarket;
 			packageProductDependencies = (
 				14968EEF247035C800228F8B /* Kingfisher */,
 			);
@@ -611,9 +611,9 @@
 			productReference = 14F335712432E39B0036FD36 /* ACMarket.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14F335842432E39D0036FD36 /* PolarIOSTests */ = {
+		14F335842432E39D0036FD36 /* AcmarketTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14F3359C2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOSTests" */;
+			buildConfigurationList = 14F3359C2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "AcmarketTests" */;
 			buildPhases = (
 				CB07A760050466F6654BB9B1 /* [CP] Check Pods Manifest.lock */,
 				14F335812432E39D0036FD36 /* Sources */,
@@ -625,14 +625,14 @@
 			dependencies = (
 				14F335872432E39D0036FD36 /* PBXTargetDependency */,
 			);
-			name = PolarIOSTests;
+			name = AcmarketTests;
 			productName = PolarIOSTests;
-			productReference = 14F335852432E39D0036FD36 /* PolarIOSTests.xctest */;
+			productReference = 14F335852432E39D0036FD36 /* AcmarketTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		14F3358F2432E39D0036FD36 /* PolarIOSUITests */ = {
+		14F3358F2432E39D0036FD36 /* AcmarketUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14F3359F2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOSUITests" */;
+			buildConfigurationList = 14F3359F2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "AcmarketUITests" */;
 			buildPhases = (
 				DA7478CD2CEF2457FD3C08D5 /* [CP] Check Pods Manifest.lock */,
 				14F3358C2432E39D0036FD36 /* Sources */,
@@ -645,9 +645,9 @@
 			dependencies = (
 				14F335922432E39D0036FD36 /* PBXTargetDependency */,
 			);
-			name = PolarIOSUITests;
+			name = AcmarketUITests;
 			productName = PolarIOSUITests;
-			productReference = 14F335902432E39D0036FD36 /* PolarIOSUITests.xctest */;
+			productReference = 14F335902432E39D0036FD36 /* AcmarketUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -674,7 +674,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 14F3356C2432E39B0036FD36 /* Build configuration list for PBXProject "PolarIOS" */;
+			buildConfigurationList = 14F3356C2432E39B0036FD36 /* Build configuration list for PBXProject "Acmarket" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -690,9 +690,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14F335702432E39B0036FD36 /* PolarIOS */,
-				14F335842432E39D0036FD36 /* PolarIOSTests */,
-				14F3358F2432E39D0036FD36 /* PolarIOSUITests */,
+				14F335702432E39B0036FD36 /* Acmarket */,
+				14F335842432E39D0036FD36 /* AcmarketTests */,
+				14F3358F2432E39D0036FD36 /* AcmarketUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -959,12 +959,12 @@
 /* Begin PBXTargetDependency section */
 		14F335872432E39D0036FD36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14F335702432E39B0036FD36 /* PolarIOS */;
+			target = 14F335702432E39B0036FD36 /* Acmarket */;
 			targetProxy = 14F335862432E39D0036FD36 /* PBXContainerItemProxy */;
 		};
 		14F335922432E39D0036FD36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 14F335702432E39B0036FD36 /* PolarIOS */;
+			target = 14F335702432E39B0036FD36 /* Acmarket */;
 			targetProxy = 14F335912432E39D0036FD36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1131,7 +1131,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.acmarket.gesdes;
 				PRODUCT_NAME = ACMarket;
 				PROVISIONING_PROFILE_SPECIFIER = LADESPENSA;
@@ -1168,7 +1168,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 2.6;
+				MARKETING_VERSION = 2.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.acmarket.gesdes;
 				PRODUCT_NAME = ACMarket;
 				PROVISIONING_PROFILE_SPECIFIER = LADESPENSA;
@@ -1196,7 +1196,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarIOS.app/PolarIOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acmarket.app/Acmarket";
 			};
 			name = Debug;
 		};
@@ -1218,7 +1218,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PolarIOS.app/PolarIOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acmarket.app/Acmarket";
 			};
 			name = Release;
 		};
@@ -1267,7 +1267,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14F3356C2432E39B0036FD36 /* Build configuration list for PBXProject "PolarIOS" */ = {
+		14F3356C2432E39B0036FD36 /* Build configuration list for PBXProject "Acmarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14F335972432E39D0036FD36 /* Debug */,
@@ -1276,7 +1276,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14F335992432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOS" */ = {
+		14F335992432E39D0036FD36 /* Build configuration list for PBXNativeTarget "Acmarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14F3359A2432E39D0036FD36 /* Debug */,
@@ -1285,7 +1285,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14F3359C2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOSTests" */ = {
+		14F3359C2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "AcmarketTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14F3359D2432E39D0036FD36 /* Debug */,
@@ -1294,7 +1294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		14F3359F2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "PolarIOSUITests" */ = {
+		14F3359F2432E39D0036FD36 /* Build configuration list for PBXNativeTarget "AcmarketUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14F335A02432E39D0036FD36 /* Debug */,

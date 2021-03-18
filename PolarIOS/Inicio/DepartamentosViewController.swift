@@ -97,7 +97,7 @@ class DepartamentosViewController: UIViewController, UICollectionViewDataSource,
     }
       override func viewWillAppear(_ animated: Bool) {
           super.viewWillAppear(animated)
-        
+
     navigationController?.setNavigationBarHidden(true, animated: false)
         consulta()
 pantalla()
@@ -142,6 +142,8 @@ pantalla()
   
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.defaults.set("", forKey: "descuentoseleccionado")
+
         if isKeyPresentInUserDefaults(key: "cantidadcarrito"){
                  let   cantidadcarrito = UserDefaults.standard.integer(forKey: "cantidadcarrito")
                  

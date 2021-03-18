@@ -119,6 +119,7 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
         super.viewDidLoad()
         pantalla()
     
+        self.defaults.set("", forKey: "descuentoseleccionado")
 
         self.defaults.removeObject(forKey:"pkproductoagregado")
         self.defaults.removeObject(forKey:"cantidadproductoagregado")
@@ -134,8 +135,36 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
                  collection2.dataSource = self
                  collection2.delegate = self
         obtenerincidencias()
-
     }
+    
+    
+    @objc func scrollToNextCell(){
+
+          //get Collection View Instance
+
+          //get cell size
+        let cellSize = CGSize(width: self.view.frame.width, height: self.view.frame.height);
+
+          //get current content Offset of the Collection view
+          let contentOffset = collection2.contentOffset;
+
+          //scroll to next cell
+        collection2.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true);
+
+
+      }
+
+      /**
+       Invokes Timer to start Automatic Animation with repeat enabled
+       */
+      func startTimer() {
+
+
+
+        scrollingTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(CategoriatiendasViewController.scrollToNextCell), userInfo: nil, repeats: true)
+
+
+      }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
      
               print(indexPath.item)
@@ -153,21 +182,20 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
               }
                   
               else {        
-                  var rowIndex = indexPath.row
-                                   let numberOfRecords:Int = self.imagenanuncio.count+1
-                                   if(rowIndex < numberOfRecords){
-                                       rowIndex = (rowIndex + 1)
-                                   }
-                                   else{
-                                       rowIndex = 0
-                                   }
+                //  var rowIndex = indexPath.row
+                  //               if(rowIndex < numberOfRecords){
+                    //                   rowIndex = (rowIndex + 1)
+                      //             }
+                        //           else{
+                          //             rowIndex = 0
+                            //       }
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath as IndexPath) as! PromoCell
                   
                   let url = URL(string: self.imagenanuncio[indexPath.item])
                   cell.imgpromo.kf.setImage(with: url)
                   
-                   scrollingTimer = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(CategoriatiendasViewController.startTimer(theTimer:)), userInfo: rowIndex, repeats: false)
-                  
+                //scrollingTimer = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(CategoriatiendasViewController.startTimer(theTimer:)), userInfo: rowIndex, repeats: false)
+                self.startTimer()
                   return cell
               }
               
@@ -207,7 +235,7 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
     }
         @objc func startTimer(theTimer:Timer){
 
-            UIView.animate(withDuration: 5.0, delay: 0,options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: 3.0, delay: 0,options: .curveEaseOut, animations: {
             self.collection2.scrollToItem(at: IndexPath(row: theTimer.userInfo! as! Int, section: 0), at: .centeredHorizontally, animated: false)
         }, completion: nil)
     }
@@ -413,11 +441,12 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
                                 self.pkpoligonoentrega2.append(dict.value(forKey: "jueves") as! Int)
                                 self.pkpoligonoentrega2.append(dict.value(forKey: "viernes") as! Int)
                                 self.pkpoligonoentrega2.append(dict.value(forKey: "sabado") as! Int)
-                         
-                                
                                 self.pkpoligonoentrega2.append(dict.value(forKey: "domingo") as! Int)
-                                self.pkpoligonoentrega.append(dict.value(forKey: "lunes") as! Int)
+                                
+                                if !self.pkpoligonoentrega.contains(dict.value(forKey: "lunes") as! Int){
+                                                                   self.pkpoligonoentrega.append(dict.value(forKey: "lunes") as! Int)
 
+                                                               }
                                 if !self.pkpoligonoentrega.contains(dict.value(forKey: "martes") as! Int){
                                     self.pkpoligonoentrega.append(dict.value(forKey: "martes") as! Int)
 
@@ -461,7 +490,8 @@ class CategoriatiendasViewController: UIViewController, UICollectionViewDataSour
                                 
                                 self.defaults.set(self.pkpoligonoentrega2, forKey:"2pkpoligonoentrega\(dia)")
 
-                             self.defaults.set(self.pkpoligonoentrega, forKey:"pkpoligonoentrega\(dia)")
+                             self.defaults.set(self.pkpoligonoentrega2, forKey:"pkpoligonoentrega\(dia)")
+                                self.pkpoligonoentrega2=[]
                             }
                         }
 

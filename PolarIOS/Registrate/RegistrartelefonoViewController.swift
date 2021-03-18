@@ -29,9 +29,9 @@ class RegistrotelefonViewController: UIViewController {
         
     }
     @IBAction func goverificacion(_ sender: Any) {
-        
         if telef.text != ""
         {
+
             guard let _ = telef.text, telef.text!.count == 10  else {
                     mostrarAlerta(title: "Ingresa un numero valido", message: "")
                     return
@@ -67,6 +67,7 @@ class RegistrotelefonViewController: UIViewController {
                     else{
                     self.cargador.isHidden = true
                         self.buttontel.isEnabled = true
+                        
                     }
                     
                     
@@ -74,6 +75,8 @@ class RegistrotelefonViewController: UIViewController {
                 }
             }
         }else{
+            buttontel.isEnabled=true;
+
                  mostrarAlerta(title: "Ingresa un numero valido", message: "")
         }
     }

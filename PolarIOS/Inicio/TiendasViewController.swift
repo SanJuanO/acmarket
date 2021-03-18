@@ -112,7 +112,8 @@ var i = 0
     override func viewDidLoad() {
         super.viewDidLoad()
        cargador.startAnimating()
-        
+        self.defaults.set("", forKey: "descuentoseleccionado")
+
         if isKeyPresentInUserDefaults(key: "cantidadcarrito"){
                         let   cantidadcarrito = UserDefaults.standard.integer(forKey: "cantidadcarrito")
                         
@@ -132,8 +133,35 @@ var i = 0
 
         
         consulta()
+        startTimer()
     }
-    
+    @objc func scrollToNextCell(){
+
+           //get Collection View Instance
+
+           //get cell size
+         let cellSize = CGSize(width: self.view.frame.width, height: self.view.frame.height);
+
+           //get current content Offset of the Collection view
+           let contentOffset = collection2.contentOffset;
+
+           //scroll to next cell
+         collection2.scrollRectToVisible(CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height), animated: true);
+
+
+       }
+
+       /**
+        Invokes Timer to start Automatic Animation with repeat enabled
+        */
+       func startTimer() {
+
+
+
+         scrollingTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(CategoriatiendasViewController.scrollToNextCell), userInfo: nil, repeats: true)
+
+
+       }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
                if collectionView == self.collection {
         if self.btitulo.count > 0 {
